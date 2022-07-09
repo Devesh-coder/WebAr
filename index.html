@@ -3,26 +3,8 @@
 	<head>
 		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-		<!-- <script>
-			window.addEventListener('load', () => {
-				const camera = document.querySelector('[camera]')
-				const marker = document.querySelector('a-marker')
-
-				marker.addEventListener('markerFound', () => {
-					let cameraPosition = camera.object3D.position
-					let markerPosition = marker.object3D.position
-					let distance = cameraPosition.distanceTo(markerPosition)
-
-					console.log(distance)
-				})
-			})
-		</script> -->
 		<script src="gesture-detector.js"></script>
 		<script src="gesture-handler.js"></script>
-
-		<!-- <script>
-			console.log(THREE)
-		</script> -->
 	</head>
 	<body style="margin: 0px; overflow: hidden">
 		<a-scene
@@ -54,6 +36,7 @@
 					position="0 0 0"
 					scale="0.05 0.05 0.05"
 					class="clickable"
+					rotation="-90 0 0"
 					gesture-handler
 				>
 				</a-entity>

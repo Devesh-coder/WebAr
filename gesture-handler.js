@@ -13,7 +13,7 @@ AFRAME.registerComponent('gesture-handler', {
 		this.handleRotation = this.handleRotation.bind(this)
 
 		this.isVisible = false
-		this.initialScale = this.el.object3D.scale.clone()
+		this.currScale = this.el.object3D.scale.clone()
 		this.scaleFactor = 1
 
 		this.el.sceneEl.addEventListener('markerFound', (e) => {
@@ -58,9 +58,9 @@ AFRAME.registerComponent('gesture-handler', {
 				this.data.maxScale,
 			)
 
-			this.el.object3D.scale.x = this.scaleFactor * this.initialScale.x
-			this.el.object3D.scale.y = this.scaleFactor * this.initialScale.y
-			this.el.object3D.scale.z = this.scaleFactor * this.initialScale.z
+			this.el.object3D.scale.x = this.scaleFactor * this.currScale.x
+			this.el.object3D.scale.y = this.scaleFactor * this.currScale.y
+			this.el.object3D.scale.z = this.scaleFactor * this.currScale.z
 		}
 	},
 })
